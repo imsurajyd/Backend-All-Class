@@ -254,14 +254,17 @@ MONGODB_URI=your_mongodb_connection_string
 IMAGEKIT_PRIVATE_KEY=your_private_key
 ```
 
+## 📷 Project Screenshots
+
+### Feed Page
+
+![Feed Page](./frontend/src/assets/Feed.png)
+
 ---
 
-## 📷 Screens
+### Create Post Page
 
-- Feed Page
-- Create Post Page
-
----
+![Create Post Page](./frontend/src/assets/Form.png)
 
 ## 🎯 Learning Objectives
 

@@ -24,7 +24,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Feed from "../pages/Feed";
-import CreatePost from "../pages/CreatePost";
+import CreatePost from "../pages/CreaatePost.jsx";
 
 const App = () => {
   return (
