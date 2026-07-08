@@ -13,7 +13,7 @@ const mongoose = require("mongoose");
 
 async function connectDB() {
   await mongoose.connect(
-    "mongodb+srv://imsurajyd_db_user:Suraj%402@cluster0.bszn9zk.mongodb.net/class6"
+    "mongodb+srv://imsurajyd_db_user:class61@cluster0.bszn9zk.mongodb.net/student"
   );
 
   console.log("Database connected successfully");
