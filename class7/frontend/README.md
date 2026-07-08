@@ -1,16 +1,287 @@
-# React + Vite
+# 📝 Blog Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple full-stack blog application built with **React**, **Express.js**, **MongoDB**, and **ImageKit**. Users can upload an image with a caption to create a blog post, and all posts are displayed on the Feed page.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![Express](https://img.shields.io/badge/Express.js-Backend-000000?logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb)
+![Mongoose](https://img.shields.io/badge/Mongoose-ODM-880000)
+![ImageKit](https://img.shields.io/badge/ImageKit-Image%20Storage-0F8BFF)
+![Axios](https://img.shields.io/badge/Axios-API-5A29E4)
+![License](https://img.shields.io/badge/Status-Learning-blue)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Create a new blog post
+- Upload images using ImageKit
+- Add captions to posts
+- View all blog posts
+- REST API with Express.js
+- MongoDB integration using Mongoose
+- Image upload using Multer
+- Frontend and Backend communication using Axios
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- React Router DOM
+- Axios
+- React Icons
+- CSS
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- Multer
+- ImageKit SDK
+- CORS
+- dotenv
+
+---
+
+## 📂 Folder Structure
+
+```text
+class7
+│
+├── backend
+│   ├── src
+│   │   ├── db
+│   │   │   └── db.js
+│   │   ├── models
+│   │   │   └── post.model.js
+│   │   ├── services
+│   │   │   └── storage.service.js
+│   │   └── app.js
+│   │
+│   ├── .env
+│   ├── package.json
+│   └── server.js
+│
+└── frontend
+    ├── pages
+    │   ├── Feed.jsx
+    │   └── CreatePost.jsx
+    │
+    ├── src
+    │   ├── App.jsx
+    │   ├── main.jsx
+    │   └── index.css
+    │
+    ├── public
+    └── package.json
+```
+
+---
+
+## 🚀 Application Flow
+
+```text
+User
+
+   │
+
+   ▼
+
+React Frontend
+
+   │
+
+Axios Request
+
+   │
+
+Express Server
+
+   │
+
+Multer Middleware
+
+   │
+
+ImageKit Upload
+
+   │
+
+MongoDB Atlas
+
+   │
+
+Response
+
+   │
+
+Feed Page
+```
+
+---
+
+## 🌐 Frontend Routes
+
+| Route | Description |
+|--------|-------------|
+| `/feed` | Display all blog posts |
+| `/create-post` | Create a new blog post |
+
+---
+
+## 📡 Backend API
+
+### Create Post
+
+```http
+POST /post-create
+```
+
+**Request**
+
+FormData
+
+```
+image
+caption
+```
+
+**Response**
+
+```json
+{
+  "message": "Post Created.."
+}
+```
+
+---
+
+### Get All Posts
+
+```http
+GET /posts
+```
+
+**Response**
+
+```json
+{
+  "message": "Data Fetched..",
+  "posts": []
+}
+```
+
+---
+
+## 📦 Database Schema
+
+```js
+Post
+
+{
+    image: String,
+    caption: String
+}
+```
+
+---
+
+## 📚 Concepts Covered
+
+- Express.js
+- React
+- React Router DOM
+- Axios
+- MongoDB Atlas
+- Mongoose
+- Multer
+- Image Upload
+- ImageKit
+- REST API
+- Middleware
+- CORS
+- Environment Variables
+- Async / Await
+- FormData
+- CRUD Fundamentals
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+---
+
+### Backend
+
+```bash
+cd backend
+
+npm install
+
+npm start
+```
+
+---
+
+### Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside the backend folder.
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+
+IMAGEKIT_PRIVATE_KEY=your_private_key
+```
+
+---
+
+## 📷 Screens
+
+- Feed Page
+- Create Post Page
+
+---
+
+## 🎯 Learning Objectives
+
+This project helped me learn:
+
+- Building REST APIs with Express.js
+- Connecting Express with MongoDB
+- Creating Mongoose Models
+- Uploading images using Multer
+- Integrating ImageKit
+- Sending FormData using Axios
+- React Routing
+- Fetching data from APIs
+- Rendering dynamic data using React
+- Full-stack communication between React and Express
+
+---
+
+## 👨‍💻 Author
+
+**Suraj Kumar**
+
+Frontend Developer & Computer Science Student
